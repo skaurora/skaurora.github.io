@@ -1,3 +1,60 @@
 baseURL: https://skaurora.github.io/
 languageCode: en-us
-title: My New Hugo Site
+title: Skaurora's Website
+theme: ["PaperMod"]
+defaultTheme: auto
+contentDir: "content"
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+#Menu
+menu:
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories
+      weight: 40
+    - identifier: tags
+      name: Tags
+      url: /tags
+      weight: 30
+    - identifier: archive
+      name: Archive
+      url: /archive
+      weight: 10
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 20
+params:
+  env: "production"
+
+# Posts
+showReadingTime: true
+showToc: true
+showBreadCrumbs: true
+showCodeCopyButtons: true
+showPostNavLinks: true
+enableEmoji: true
+
+# Home Page
+homeInfoParams:
+  Title: 📚 Stacks
+  Content: Welcome to the official blog for Programming.Dev! Here we post things relating to our instances including announcements, release notes, community showcases, and more.
+
+socialIcons:
+  - name: "Home"
+    url: "https://skaurora.github.io"
+
+# Search
+fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
