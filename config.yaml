@@ -1,3 +1,74 @@
-theme: papermod
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!
+# Config
+languageCode: en-us
+title: Skaurora's Blog
+theme: ["PaperMod"]
+copyright: "© 2025 Skaurora
+defaultTheme: auto
+contentDir: "content"
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# Menu
+menu:
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories
+      weight: 40
+    - identifier: tags
+      name: Tags
+      url: /tags
+      weight: 30
+    - identifier: archive
+      name: Archive
+      url: /archive
+      weight: 10
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 20
+
+params:
+  env: "production"
+
+  # General
+  ShowRssButtonInSectionTermList: true
+  ShowFullTextinRSS: true
+
+  # Posts
+  showReadingTime: true
+  showToc: true
+  showBreadCrumbs: true
+  showCodeCopyButtons: true
+  showPostNavLinks: true
+  enableEmoji: true
+
+  # Misc
+  images: ["logo.png"]
+
+  # Label
+  label:
+    text: "Stacks"
+    icon: "/logo.png"
+    iconHeight: 35
+
+  # Home Page
+  homeInfoParams:
+    Title: Skaurora's Blog
+    Content: It's a me
+  socialIcons:
+    - name: "Git"
+      url: "https://github.com/skaurora"
+
+  # Search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
